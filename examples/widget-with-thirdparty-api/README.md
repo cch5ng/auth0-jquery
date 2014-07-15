@@ -2,9 +2,9 @@
 
 This is the seed project you need to use if you're going to create an app that will use Auth0, jQuery and a Third party API like Firebase or Amazon.
 
-To see the example working, just go to http://auth0.github.io/auth0-jquery-thirdpartyapi-sample/
+To see the example working, just go to http://auth0.github.io/auth0-jquery/examples/widget-with-thirdparty-api/
 
-If you want to connect to an API that you're going to develop in any language, please check [this other seed](https://github.com/auth0/auth0-jquery-api-sample).
+If you want to connect to an API that you're going to develop in any language, please check [this other seed](https://github.com/auth0/auth0-jquery/tree/gh-pages/examples/widget-with-api).
 
 ## Running the example
 
