@@ -42,8 +42,16 @@ $(document).ready(function() {
     });
 
     $('.btn-api').click(function(e) {
-        // Just call your API here. The header will be sent
-    })
+      // Just call your API here. The header will be sent
+      $.ajax({
+        url: 'http://localhost:3001/secured/ping',
+        method: 'GET'
+      }).then(function(data, textStatus, jqXHR) {
+        alert("The request to the secured enpoint was successfull");
+      }, function() {
+        alert("You need to download the server seed and start it to call this API");
+      });
+    });
 
 
 });
