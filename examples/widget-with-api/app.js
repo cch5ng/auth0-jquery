@@ -28,6 +28,8 @@ $(document).ready(function() {
           $('.login-box').hide();
           $('.logged-in-box').show();
           $('.nickname').text(profile.nickname);
+          $('.nickname').text(profile.name);
+          $('.avatar').attr('src', profile.picture);
         }
       });
     });
