@@ -1,12 +1,10 @@
 $(document).ready(function() {
-    var widget = new Auth0Widget({
-        domain: 'samples.auth0.com',
-        clientID: 'r34d7GotLSGQciOHGHLrJaQo1Zg0cXQb',
-        callbackURL: location.href,
-        callbackOnLocationHash: true
-    });
+    var lock = new Auth0Lock(
+      'r34d7GotLSGQciOHGHLrJaQo1Zg0cXQb',
+      'samples.auth0.com'
+    );
 
-    var loginHash = widget.parseHash(location.hash);
+    var loginHash = lock.parseHash(location.hash);
     var userProfile;
     if (loginHash) {
       localStorage.setItem('userToken', loginHash.id_token);
@@ -15,7 +13,7 @@ $(document).ready(function() {
 
     var token = localStorage.getItem('userToken');
     if (token) {
-      widget.getProfile(token, function (err, profile) {
+      lock.getProfile(token, function (err, profile) {
         if (err) {
           // Error callback
           console.log("There was an error");
@@ -35,13 +33,13 @@ $(document).ready(function() {
         }
       });
     } else {
-      widget.getClient().getSSOData(function(err, data) {
+      lock.getClient().getSSOData(function(err, data) {
         if (err) {
           return;
         }
 
         if (data.sso) {
-          widget.getClient().signin({connection: data.lastUsedConnection.strategy});
+          lock.getClient().signin({connection: data.lastUsedConnection.strategy});
         } else {
           $('.login-box').show();
         }
@@ -53,7 +51,7 @@ $(document).ready(function() {
 
     $('.btn-login').click(function(e) {
       e.preventDefault();
-      widget.signin({} , null);
+      lock.showSignin(null);
     });
 
 
