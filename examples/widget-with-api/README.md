@@ -11,7 +11,7 @@ If you want to connect to a third party API like Firebase or Amazon, please chec
 In order to run the example you need to just start a server. What we suggest is doing the following:
 
 1. Install node
-2. run `npm install -g serve` 
+2. run `npm install -g serve`
 3. run `serve` in the directory of this project.
 
 Go to `http://localhost:3000` and you'll see the app running :).
