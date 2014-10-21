@@ -33,6 +33,7 @@ $(document).ready(function() {
         }
       });
     } else {
+      lock.getClient()._callbackOnLocationHash = true;
       lock.getClient().getSSOData(function(err, data) {
         if (err) {
           return;
