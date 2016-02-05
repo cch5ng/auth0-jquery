@@ -5,3 +5,7 @@ You'll see that we have two different apps, one in the folder one and the other 
 Check [the first client id](https://github.com/auth0/auth0-jquery/blob/gh-pages/examples/sso-multiple-apps/one/app.js#L4) and [the second one](https://github.com/auth0/auth0-jquery/blob/gh-pages/examples/sso-multiple-apps/two/app.js#L4)
 
 However, if you go to http://auth0.github.io/auth0-jquery/ sso-multiple-apps/one/, login, and then go to http://auth0.github.io/auth0-jquery/ sso-multiple-apps/two/ (Or the other way around), you'll see that you're logged in in the second app without having to do anything.
+
+## Updates for production
+
+Auth0's Lock library is available on CDN (default pointer in this project). See the [Lock repository README](https://github.com/auth0/lock#install) for instructions on getting the latest release version.

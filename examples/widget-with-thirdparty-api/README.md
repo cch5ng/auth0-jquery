@@ -15,3 +15,7 @@ In order to run the example you need to just start a server. What we suggest is 
 3. run `serve` in the directory of this project.
 
 Go to `http://localhost:3000` and you'll see the app running :).
+
+## Updates for production
+
+Auth0's Lock library is available on CDN (default pointer in this project). See the [Lock repository README](https://github.com/auth0/lock#install) for instructions on getting the latest release version.
